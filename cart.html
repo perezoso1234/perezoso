@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <a href="japanese.html" class="menu-back">← Menu</a>
+
+        <h1>perezoso</h1>
+        <p>Cart</p>
+    </header>
+
+    <main>
+
+        <div id="cart-list"></div>
+
+        <div id="total"></div>
+
+        <button type="button" id="clear-cart-button">
+            カートを空にする
+        </button>
+
+        <button type="button" id="order-button">
+            注文する
+        </button>
+
+    </main>
+    <!-- カートを空にする確認画面 -->
+    <div id="confirm-modal" class="confirm-modal">
+
+        <div class="confirm-box">
+
+            <p>カートを空にしますか？</p>
+
+            <div class="confirm-buttons">
+
+                <button type="button" id="cancel-clear">
+                    キャンセル
+                </button>
+
+                <button type="button" id="confirm-clear">
+                    削除する
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="js/cart.js"></script>
+
+</body>
+
+</html>

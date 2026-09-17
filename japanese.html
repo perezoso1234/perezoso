@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta chartset="UTF-8">
+    <meta name="viewport"
+    content="width=device-width,initial-scale=1.0">
+    <title>perezoso</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="fixed-header">
+    <header>
+        <h1>
+            perezoso
+        </h1>
+        <p>Menu</p>
+    </header>
+
+    <nav>
+        <a href="#food">Food</a>
+        <a href="#drink">Drink</a>
+    </nav>
+    </div>
+    <main>
+        <section id="food">
+            <h2>Food</h2>
+            <div class="menu-item">
+                <div>
+                    <h3>ホタテフライ</h3>
+                    <p>￥750</p>
+                </div>
+                <button type="button" class="add-button"
+                        data-name="ホタテフライ"
+                        data-price="300">
+                    +
+                </button>
+                <div class="quantity-control" style="display: none;">
+                    <button type="button" class="minus-button">-</button>
+                    <span class="quantity">1</span>
+                    <button type="button" class="plus-button">+</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <h3>大根の唐揚げ</h3>
+                    <p>￥600</p>
+                </div>
+                <button type="button" class="add-button"
+                        data-name="大根のから揚げ"
+                        data-price="600">
+                    +
+                </button>
+                <div class="quantity-control" style="display: none;">
+                    <button type="button" class="minus-button">-</button>
+                    <span class="quantity">1</span>
+                    <button type="button" class="plus-button">+</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <h3>長芋の浅漬け</h3>
+                    <p>￥550</p>
+                </div>
+                <button type="button" class="add-button"
+                        data-name="長芋の浅漬け"
+                        data-price="550">
+                    +
+                </button>
+                <div class="quantity-control" style="display: none;">
+                    <button type="button" class="minus-button">-</button>
+                    <span class="quantity">1</span>
+                    <button type="button" class="plus-button">+</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <h3>レーズンバター</h3>
+                    <p>￥450</p>
+                </div>
+                <button type="button" class="add-button"
+                        data-name="レーズンバター"
+                        data-price="450">
+                    +
+                </button>
+                <div class="quantity-control" style="display: none;">
+                    <button type="button" class="minus-button">-</button>
+                    <span class="quantity">1</span>
+                    <button type="button" class="plus-button">+</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <h3>鶏ハラミの炭火焼き</h3>
+                    <p>￥700</p>
+                </div>
+                <button type="button" class="add-button"
+                        data-name="鶏ハラミの炭火焼き"
+                        data-price="700">
+                    +
+                </button>
+                <div class="quantity-control" style="display: none;">
+                    <button type="button" class="minus-button">-</button>
+                    <span class="quantity">1</span>
+                    <button type="button" class="plus-button">+</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <h3>ベビーホタテのガーリックソテー</h3>
+                    <p>￥700</p>
+                </div>
+                <button type="button" class="add-button"
+                        data-name="ベビーホタテのガーリックソテー"
+                        data-price="700">
+                    +
+                </button>
+                <div class="quantity-control" style="display: none;">
+                    <button type="button" class="minus-button">-</button>
+                    <span class="quantity">1</span>
+                    <button type="button" class="plus-button">+</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <h3>砂肝のガーリックソテー</h3>
+                    <p>￥650</p>
+                </div>
+                <button type="button" class="add-button"
+                        data-name="砂肝のガーリックソテー"
+                        data-price="650">
+                    +
+                </button>
+                <div class="quantity-control" style="display: none;">
+                    <button type="button" class="minus-button">-</button>
+                    <span class="quantity">1</span>
+                    <button type="button" class="plus-button">+</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <h3>雲仙ハムのロースト</h3>
+                    <p>￥600</p>
+                </div>
+                <button type="button" class="add-button"
+                        data-name="雲仙ハムのロースト"
+                        data-price="600">
+                    +
+                </button>
+                <div class="quantity-control" style="display: none;">
+                    <button type="button" class="minus-button">-</button>
+                    <span class="quantity">1</span>
+                    <button type="button" class="plus-button">+</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <h3>本日のアヒージョ</h3>
+                    <p>￥1000</p>
+                </div>
+                <button type="button" class="add-button"
+                        data-name="本日のアヒージョ"
+                        data-price="1000">
+                    +
+                </button>
+                <div class="quantity-control" style="display: none;">
+                    <button type="button" class="minus-button">-</button>
+                    <span class="quantity">1</span>
+                    <button type="button" class="plus-button">+</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <h3>本日の冷製パスタ</h3>
+                    <p>￥1400</p>
+                </div>
+                <button type="button" class="add-button"
+                        data-name="本日の冷製パスタ"
+                        data-price="1400">
+                    +
+                </button>
+                <div class="quantity-control" style="display: none;">
+                    <button type="button" class="minus-button">-</button>
+                    <span class="quantity">1</span>
+                    <button type="button" class="plus-button">+</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <h3>本日のリゾット</h3>
+                    <p>￥1400</p>
+                </div>
+                <button type="button" class="add-button"
+                        data-name="本日のリゾット"
+                        data-price="1400">
+                    +
+                </button>
+                <div class="quantity-control" style="display: none;">
+                    <button type="button" class="minus-button">-</button>
+                    <span class="quantity">1</span>
+                    <button type="button" class="plus-button">+</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <h3>魚介とキノコ＆大葉のオイルパスタ</h3>
+                    <p>￥1200</p>
+                </div>
+                <button type="button" class="add-button"
+                        data-name="魚介とキノコ＆大葉のオイルパスタ"
+                        data-price="1200">
+                    +
+                </button>
+                <div class="quantity-control" style="display: none;">
+                    <button type="button" class="minus-button">-</button>
+                    <span class="quantity">1</span>
+                    <button type="button" class="plus-button">+</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <h3>鶏肉とズッキーニのトマトパスタ</h3>
+                    <p>￥1300</p>
+                </div>
+                <button type="button" class="add-button"
+                        data-name="鶏肉とズッキーニのトマトパスタ"
+                        data-price="1300">
+                    +
+                </button>
+                <div class="quantity-control" style="display: none;">
+                    <button type="button" class="minus-button">-</button>
+                    <span class="quantity">1</span>
+                    <button type="button" class="plus-button">+</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <h3>ベビーホタテと小松菜のクリームパスタ</h3>
+                    <p>￥1400</p>
+                </div>
+                <button type="button" class="add-button"
+                        data-name="ベビーホタテと小松菜のクリームパスタ"
+                        data-price="1400">
+                    +
+                </button>
+                <div class="quantity-control" style="display: none;">
+                    <button type="button" class="minus-button">-</button>
+                    <span class="quantity">1</span>
+                    <button type="button" class="plus-button">+</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <h3>えだ豆ペペロン和え</h3>
+                    <p>￥450</p>
+                </div>
+                <button type="button" class="add-button"
+                        data-name="えだ豆ペペロン和え"
+                        data-price="450">
+                    +
+                </button>
+                <div class="quantity-control" style="display: none;">
+                    <button type="button" class="minus-button">-</button>
+                    <span class="quantity">1</span>
+                    <button type="button" class="plus-button">+</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <h3>洋風ポテトサラダ</h3>
+                    <p>￥550</p>
+                </div>
+                <button type="button" class="add-button"
+                        data-name="洋風ポテトサラダ"
+                        data-price="550">
+                    +
+                </button>
+                <div class="quantity-control" style="display: none;">
+                    <button type="button" class="minus-button">-</button>
+                    <span class="quantity">1</span>
+                    <button type="button" class="plus-button">+</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <h3>日替チーズ</h3>
+                    <p>￥600</p>
+                </div>
+                <button type="button" class="add-button"
+                        data-name="日替チーズ"
+                        data-price="600">
+                    +
+                </button>
+                <div class="quantity-control" style="display: none;">
+                    <button type="button" class="minus-button">-</button>
+                    <span class="quantity">1</span>
+                    <button type="button" class="plus-button">+</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <h3>ブルスケッタ</h3>
+                    <p>￥500</p>
+                </div>
+                <button type="button" class="add-button"
+                        data-name="ブルスケッタ"
+                        data-price="500">
+                    +
+                </button>
+                <div class="quantity-control" style="display: none;">
+                    <button type="button" class="minus-button">-</button>
+                    <span class="quantity">1</span>
+                    <button type="button" class="plus-button">+</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <h3>季節野菜のフリッタータ</h3>
+                    <p>￥500</p>
+                </div>
+                <button type="button" class="add-button"
+                        data-name="季節野菜のフリッタータ"
+                        data-price="500">
+                    +
+                </button>
+                <div class="quantity-control" style="display: none;">
+                    <button type="button" class="minus-button">-</button>
+                    <span class="quantity">1</span>
+                    <button type="button" class="plus-button">+</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <h3>ポテトフライ</h3>
+                    <p>￥600</p>
+                </div>
+                <button type="button" class="add-button"
+                        data-name="ポテトフライ"
+                        data-price="600">
+                    +
+                </button>
+                <div class="quantity-control" style="display: none;">
+                    <button type="button" class="minus-button">-</button>
+                    <span class="quantity">1</span>
+                    <button type="button" class="plus-button">+</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <h3>チーズたっぷりPizza</h3>
+                    <p>￥1500</p>
+                </div>
+                <button type="button" class="add-button"
+                        data-name="チーズたっぷりPizza"
+                        data-price="1500">
+                    +
+                </button>
+                <div class="quantity-control" style="display: none;">
+                    <button type="button" class="minus-button">-</button>
+                    <span class="quantity">1</span>
+                    <button type="button" class="plus-button">+</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <h3>トマトとジェノヴェーゼPizza</h3>
+                    <p>￥1500</p>
+                </div>
+                <button type="button" class="add-button"
+                        data-name="トマトとジェノヴェーゼPizza"
+                        data-price="1500">
+                    +
+                </button>
+                <div class="quantity-control" style="display: none;">
+                    <button type="button" class="minus-button">-</button>
+                    <span class="quantity">1</span>
+                    <button type="button" class="plus-button">+</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <h3>バケット(4枚)</h3>
+                    <p>￥350</p>
+                </div>
+                <button type="button" class="add-button"
+                        data-name="バケット(4枚)"
+                        data-price="350">
+                    +
+                </button>
+                <div class="quantity-control" style="display: none;">
+                    <button type="button" class="minus-button">-</button>
+                    <span class="quantity">1</span>
+                    <button type="button" class="plus-button">+</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <h3>本日のリエット</h3>
+                    <p>￥550</p>
+                </div>
+                <button type="button" class="add-button"
+                        data-name="本日のリエット"
+                        data-price="550">
+                    +
+                </button>
+                <div class="quantity-control" style="display: none;">
+                    <button type="button" class="minus-button">-</button>
+                    <span class="quantity">1</span>
+                    <button type="button" class="plus-button">+</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <h3>本日の生春巻き</h3>
+                    <p>￥750</p>
+                </div>
+                <button type="button" class="add-button"
+                        data-name="本日の生春巻き"
+                        data-price="750">
+                    +
+                </button>
+                <div class="quantity-control" style="display: none;">
+                    <button type="button" class="minus-button">-</button>
+                    <span class="quantity">1</span>
+                    <button type="button" class="plus-button">+</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <h3>オリーブ</h3>
+                    <p>￥400</p>
+                </div>
+                <button type="button" class="add-button"
+                        data-name="オリーブ"
+                        data-price="400">
+                    +
+                </button>
+                <div class="quantity-control" style="display: none;">
+                    <button type="button" class="minus-button">-</button>
+                    <span class="quantity">1</span>
+                    <button type="button" class="plus-button">+</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <h3>炙りカマンベールナッツ</h3>
+                    <p>￥700</p>
+                </div>
+                <button type="button" class="add-button"
+                        data-name="炙りカマンベールナッツ"
+                        data-price="700">
+                    +
+                </button>
+                <div class="quantity-control" style="display: none;">
+                    <button type="button" class="minus-button">-</button>
+                    <span class="quantity">1</span>
+                    <button type="button" class="plus-button">+</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <h3>鮮魚のエスカベッシュ</h3>
+                    <p>￥700</p>
+                </div>
+                <button type="button" class="add-button"
+                        data-name="鮮魚のエスカベッシュ"
+                        data-price="700">
+                    +
+                </button>
+                <div class="quantity-control" style="display: none;">
+                    <button type="button" class="minus-button">-</button>
+                    <span class="quantity">1</span>
+                    <button type="button" class="plus-button">+</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <h3>明太子のガーリックマリネ</h3>
+                    <p>￥600</p>
+                </div>
+                <button type="button" class="add-button"
+                        data-name="明太子のガーリックマリネ"
+                        data-price="600">
+                    +
+                </button>
+                <div class="quantity-control" style="display: none;">
+                    <button type="button" class="minus-button">-</button>
+                    <span class="quantity">1</span>
+                    <button type="button" class="plus-button">+</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <h3>豚肉のカツレツ</h3>
+                    <p>￥700</p>
+                </div>
+                <button type="button" class="add-button"
+                        data-name="豚肉のカツレツ"
+                        data-price="700">
+                    +
+                </button>
+                <div class="quantity-control" style="display: none;">
+                    <button type="button" class="minus-button">-</button>
+                    <span class="quantity">1</span>
+                    <button type="button" class="plus-button">+</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <h3>ミックスナッツ</h3>
+                    <p>￥400</p>
+                </div>
+                <button type="button" class="add-button"
+                        data-name="ミックスナッツ"
+                        data-price="400">
+                    +
+                </button>
+                <div class="quantity-control" style="display: none;">
+                    <button type="button" class="minus-button">-</button>
+                    <span class="quantity">1</span>
+                    <button type="button" class="plus-button">+</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="drink">
+            <h2>Drink</h2>
+            <div class="menu-category">
+                <h3>perezosoおすすめ</h3>
+            <div class="menu-item">
+                <div>
+                    <h3>生しぼりサワー</h3>
+                    <p>￥500</p>
+                </div>
+                <button type="button" class="add-button"
+                        data-name="生しぼりサワー"
+                        data-price="500">
+                    +
+                </button>
+                <div class="quantity-control" style="display: none;">
+                    <button type="button" class="minus-button">-</button>
+                    <span class="quantity">1</span>
+                    <button type="button" class="plus-button">+</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <h3>【三重県】 キンミヤハイボール</h3>
+                    <p>￥500</p>
+                </div>
+                <button type="button" class="add-button"
+                        data-name="【三重県】キンミヤハイボール"
+                        data-price="500">
+                    +
+                </button>
+                <div class="quantity-control" style="display: none;">
+                    <button type="button" class="minus-button">-</button>
+                    <span class="quantity">1</span>
+                    <button type="button" class="plus-button">+</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <h3>ズブロッカ【ウォッカ】</h3>
+                    <p>￥600</p>
+                </div>
+                <button type="button" class="add-button"
+                        data-name="ズブロッカ【ウォッカ】"
+                        data-price="600">
+                    +
+                </button>
+                <div class="quantity-control" style="display: none;">
+                    <button type="button" class="minus-button">-</button>
+                    <span class="quantity">1</span>
+                    <button type="button" class="plus-button">+</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <h3>SHIRI【ラフランス・ライチ・シャルドネ】</h3>
+                    <p>￥600</p>
+                </div>
+                <button type="button" class="add-button"
+                        data-name="SHIRI【ラフランス・ライチ・シャルドネ】"
+                        data-price="600">
+                    +
+                </button>
+                <div class="quantity-control" style="display: none;">
+                    <button type="button" class="minus-button">-</button>
+                    <span class="quantity">1</span>
+                    <button type="button" class="plus-button">+</button>
+                </div>
+            </div>
+            </div>
+            <div class="menu-category">
+                <h3>たちまち</h3>
+            <div class="menu-item">
+                <div>
+                    <h3>生ビール【カールスバーグ】</h3>
+                    <p>￥550</p>
+                </div>
+                <button type="button" class="add-button"
+                        data-name="生ビール【カールスバーグ】"
+                        data-price="550">
+                    +
+                </button>
+                <div class="quantity-control" style="display: none;">
+                    <button type="button" class="minus-button">-</button>
+                    <span class="quantity">1</span>
+                    <button type="button" class="plus-button">+</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <h3>ハイボール</h3>
+                    <p>￥500</p>
+                </div>
+                <button type="button" class="add-button"
+                        data-name="ハイボール"
+                        data-price="500">
+                    +
+                </button>
+                <div class="quantity-control" style="display: none;">
+                    <button type="button" class="minus-button">-</button>
+                    <span class="quantity">1</span>
+                    <button type="button" class="plus-button">+</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <h3>スパークリングワイン</h3>
+                    <p>￥500</p>
+                </div>
+                <button type="button" class="add-button"
+                        data-name="スパークリングワイン"
+                        data-price="500">
+                    +
+                </button>
+                <div class="quantity-control" style="display: none;">
+                    <button type="button" class="minus-button">-</button>
+                    <span class="quantity">1</span>
+                    <button type="button" class="plus-button">+</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <h3>白ワイン【モンテベッロ・トレッビアーノ】</h3>
+                    <p>￥500</p>
+                </div>
+                <button type="button" class="add-button"
+                        data-name="白ワイン【モンテベッロ・トレッビアーノ】"
+                        data-price="500">
+                    +
+                </button>
+                <div class="quantity-control" style="display: none;">
+                    <button type="button" class="minus-button">-</button>
+                    <span class="quantity">1</span>
+                    <button type="button" class="plus-button">+</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <h3>赤ワイン【モンテベッロ・サンジョヴェーゼ】</h3>
+                    <p>￥500</p>
+                </div>
+                <button type="button" class="add-button"
+                        data-name="赤ワイン【モンテベッロ・サンジョヴェーゼ】"
+                        data-price="500">
+                    +
+                </button>
+                <div class="quantity-control" style="display: none;">
+                    <button type="button" class="minus-button">-</button>
+                    <span class="quantity">1</span>
+                    <button type="button" class="plus-button">+</button>
+                </div>
+            </div>
+            </div>
+            <div clss="drink-info">
+                <p>スパークリング、赤、白各ボトルあります!￥3,500～</p>
+                <p>詳しくはスタッフまで!</p>
+            </div>
+            <div class="menu-category">
+                <h3>その他ドリンク</h3>
+            <div class="menu-item">
+                <div>
+                    <h3>ジン【タンカレー】</h3>
+                    <p>￥550</p>
+                </div>
+                <button type="button" class="add-button"
+                        data-name="ジン【タンカレー】"
+                        data-price="550">
+                    +
+                </button>
+                <div class="quantity-control" style="display: none;">
+                    <button type="button" class="minus-button">-</button>
+                    <span class="quantity">1</span>
+                    <button type="button" class="plus-button">+</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <h3>桜尾ジン</h3>
+                    <p>￥650</p>
+                </div>
+                <button type="button" class="add-button"
+                        data-name="桜尾ジン"
+                        data-price="650">
+                    +
+                </button>
+                <div class="quantity-control" style="display: none;">
+                    <button type="button" class="minus-button">-</button>
+                    <span class="quantity">1</span>
+                    <button type="button" class="plus-button">+</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <h3>カンパリ</h3>
+                    <p>￥550</p>
+                </div>
+                <button type="button" class="add-button"
+                        data-name="カンパリ"
+                        data-price="550">
+                    +
+                </button>
+                <div class="quantity-control" style="display: none;">
+                    <button type="button" class="minus-button">-</button>
+                    <span class="quantity">1</span>
+                    <button type="button" class="plus-button">+</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <h3>カシス</h3>
+                    <p>￥550</p>
+                </div>
+                <button type="button" class="add-button"
+                        data-name="カシス"
+                        data-price="550">
+                    +
+                </button>
+                <div class="quantity-control" style="display: none;">
+                    <button type="button" class="minus-button">-</button>
+                    <span class="quantity">1</span>
+                    <button type="button" class="plus-button">+</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <h3>梅酒</h3>
+                    <p>￥550</p>
+                </div>
+                <button type="button" class="add-button"
+                        data-name="梅酒"
+                        data-price="550">
+                    +
+                </button>
+                <div class="quantity-control" style="display: none;">
+                    <button type="button" class="minus-button">-</button>
+                    <span class="quantity">1</span>
+                    <button type="button" class="plus-button">+</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <h3>フランジェリコ【ヘーゼルナッツリキュール】</h3>
+                    <p>￥650</p>
+                </div>
+                <button type="button" class="add-button"
+                        data-name="フランジェリコ【ヘーゼルナッツリキュール】"
+                        data-price="650">
+                    +
+                </button>
+                <div class="quantity-control" style="display: none;">
+                    <button type="button" class="minus-button">-</button>
+                    <span class="quantity">1</span>
+                    <button type="button" class="plus-button">+</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <h3>ブッシュミルズ【アイリッシュウイスキー】</h3>
+                    <p>￥600</p>
+                </div>
+                <button type="button" class="add-button"
+                        data-name="ブッシュミルズ【アイリッシュウイスキー】"
+                        data-price="600">
+                    +
+                </button>
+                <div class="quantity-control" style="display: none;">
+                    <button type="button" class="minus-button">-</button>
+                    <span class="quantity">1</span>
+                    <button type="button" class="plus-button">+</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <h3>ウッドフォードリザーブ【バーボンウイスキー※ケンタッキー最古の蒸留所】</h3>
+                    <p>￥700</p>
+                </div>
+                <button type="button" class="add-button"
+                        data-name="ウッドフォードリザーブ【バーボンウイスキー※ケンタッキー最古の蒸留所】"
+                        data-price="700">
+                    +
+                </button>
+                <div class="quantity-control" style="display: none;">
+                    <button type="button" class="minus-button">-</button>
+                    <span class="quantity">1</span>
+                    <button type="button" class="plus-button">+</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <h3>焼酎【麦・芋】</h3>
+                    <p>￥550</p>
+                </div>
+                <button type="button" class="add-button"
+                        data-name="焼酎【麦・芋】"
+                        data-price="550">
+                    +
+                </button>
+                <div class="quantity-control" style="display: none;">
+                    <button type="button" class="minus-button">-</button>
+                    <span class="quantity">1</span>
+                    <button type="button" class="plus-button">+</button>
+                </div>
+            </div>
+            <div clss="drink-info">
+                <p>その他ウイスキーあります！</p>
+                <p>詳しくはスタッフまで!</p>
+            </div>
+            </div>
+            <div class="menu-category">
+                <h3>ノンアルコール</h3>
+            <div class="menu-item">
+                <div>
+                    <h3>ぶどう100%</h3>
+                    <p>￥650</p>
+                </div>
+                <button type="button" class="add-button"
+                        data-name="ぶどう100%"
+                        data-price="650">
+                    +
+                </button>
+                <div class="quantity-control" style="display: none;">
+                    <button type="button" class="minus-button">-</button>
+                    <span class="quantity">1</span>
+                    <button type="button" class="plus-button">+</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <h3>オレンジジュース</h3>
+                    <p>￥500</p>
+                </div>
+                <button type="button" class="add-button"
+                        data-name="オレンジジュース"
+                        data-price="500">
+                    +
+                </button>
+                <div class="quantity-control" style="display: none;">
+                    <button type="button" class="minus-button">-</button>
+                    <span class="quantity">1</span>
+                    <button type="button" class="plus-button">+</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <h3>ウーロン茶</h3>
+                    <p>￥300</p>
+                </div>
+                <button type="button" class="add-button"
+                        data-name="ウーロン茶"
+                        data-price="300">
+                    +
+                </button>
+                <div class="quantity-control" style="display: none;">
+                    <button type="button" class="minus-button">-</button>
+                    <span class="quantity">1</span>
+                    <button type="button" class="plus-button">+</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <h3>たくさん水</h3>
+                    <p>￥200</p>
+                </div>
+                <button type="button" class="add-button"
+                        data-name="たくさん水"
+                        data-price="200">
+                    +
+                </button>
+                <div class="quantity-control" style="display: none;">
+                    <button type="button" class="minus-button">-</button>
+                    <span class="quantity">1</span>
+                    <button type="button" class="plus-button">+</button>
+                </div>
+            </div>
+            <div clss="drink-info">
+                <p>その他ノンアルコールドリンクあります！</p>
+                <p>詳しくはスタッフまで!</p>
+            </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 商品選択ポップアップ -->
+<div id="modal" class="modal">
+
+    <div class="modal-content">
+
+        <h2 id="modal-name">商品名</h2>
+
+        <div class="quantity-control">
+
+            <button type="button" id="minus">-</button>
+
+            <span id="quantity">1</span>
+
+            <button type="button" id="plus">+</button>
+
+        </div>
+
+        <button type="button" id="add-cart">
+            カートに入れる
+        </button>
+
+        <button type="button" id="close-modal">
+            閉じる
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<a href="cart.html" class="cart-button" aria-label="カートを見る">
+    <svg class="cart-icon" viewBox="0 0 24 24">
+        <path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.8a2 2 0 0 0 2-1.6L21 8H6"/>
+        <circle cx="10" cy="20" r="1"/>
+        <circle cx="18" cy="20" r="1"/>
+    </svg>
+
+    <span id="cart-count">0</span>
+</a>
+<script src="js/script.js"></script>
+</body>
+</html>
