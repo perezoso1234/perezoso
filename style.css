@@ -1,0 +1,557 @@
+*{
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin:0;
+    background-color: #b7191f;
+    color: #f7f1e6;
+    font-family:"bodoni Moda", serif;
+}
+
+.container{
+    width: 88%;
+    max-width: 700px;
+    height: 850px;
+    margin:70px auto 0;
+    background-color: #b7191f;
+    border:2px solid #f7f1e6;
+    border-radius: 8px;
+    position:relative;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(80,50,30,0.08);
+}
+
+.shop-name{
+    text-align: center;
+    margin-top: 190px;
+    font-family: "Bodoni Moda",serif;
+    font-size:46px;
+    font-weight: 400;
+    letter-spacing: 6px;
+    color:#f7f1e6
+}
+
+.language{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    margin-top: 70px;
+    gap: 20px;
+}
+
+.language a{
+    width: 70%;
+    padding: 15px 0;
+    text-align: center;
+    text-decoration:none;
+    font-size:26px;
+    color:#f7f1e6;
+    border: 1px solid rgba(255,255,255,0.7);
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.language a:hover{
+    background-color: #f7f1e6;
+    color: #b7191f;
+    letter-spacing: 3px;
+}
+
+.line-art{
+    position: absolute;
+    left:0;
+    bottom:0;
+    width:65%;
+    opacity:0.7;
+}
+
+@media(max-width:600px){
+    .container{
+        width:86%;
+        height:auto;
+        min-height: 850px;
+        margin: 65px auto 30px;
+    }
+
+    .shop-name{
+        margin-top: 190px;
+        font-size: 42px;
+        letter-spacing: 5px;
+    }
+
+    .language{
+        margin-top: 70px;
+        gap: 18px;
+    }
+
+    .language a {
+        width: 70%;
+        font-size: 26px;
+    }
+
+    .line-art{
+        width: 65%;
+    }
+}
+
+/* 全体 */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #fdf8f3;
+    color: #4a2525;
+    font-family: "Times New Roman", serif;
+}
+
+/* ヘッダー */
+header {
+    background-color: #8b1e1e;
+    color: white;
+    text-align: center;
+    padding: 25px 10px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+    letter-spacing: 2px;
+}
+
+header p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    letter-spacing: 4px;
+}
+
+/* カテゴリーナビ */
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    border-bottom: 1px solid #d8bcbc;
+}
+
+nav a {
+    width: 50%;
+    padding: 15px;
+    text-align: center;
+    color: #8b1e1e;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.fixed-header{
+    position: sticky;
+    top: 0;
+
+}
+/* メイン */
+main {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 25px 20px 100px;
+}
+
+/* FOOD・DRINK */
+section {
+    margin-bottom: 45px;
+    scroll-margin-top: 200px;
+}
+
+section > h2 {
+    margin-bottom: 25px;
+    color: #8b1e1e;
+    text-align: center;
+    font-size: 25px;
+    letter-spacing: 4px;
+}
+
+/* おすすめ・たちまちなど */
+.menu-category {
+    margin-bottom: 30px;
+}
+
+.menu-category > h3 {
+    margin: 0 0 10px;
+    padding: 8px 12px;
+    border-left: 4px solid #8b1e1e;
+    color: #8b1e1e;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+/* 商品 */
+.menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 5px;
+    border-bottom: 1px solid #dfcccc;
+}
+
+.menu-item h3,
+.menu-item h4 {
+    margin: 0 0 5px;
+    font-size: 17px;
+    font-weight: normal;
+}
+
+.menu-item p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* ＋ボタン */
+.menu-item button {
+    width: 35px;
+    height: 35px;
+    border: 1px solid #8b1e1e;
+    border-radius: 50%;
+    background-color: white;
+    color: #8b1e1e;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* ボトルのお知らせ */
+.drink-info {
+    margin-top: 35px;
+    padding: 18px;
+    border: 1px solid #8b1e1e;
+    text-align: center;
+    background-color: white;
+}
+
+.drink-info p {
+    margin: 4px 0;
+    font-size: 14px;
+}
+
+/* 注文を見る */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 12px 20px;
+    background-color: #fdf8f3;
+    border-top: 1px solid #d8bcbc;
+}
+
+.order-button {
+    display: block;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 14px;
+    background-color: #8b1e1e;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* ボタンを押したとき */
+.menu-item button:active {
+    background-color: #8b1e1e;
+    color: white;
+}
+.quantity-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.quantity-control button {
+    width: 35px;
+    height: 35px;
+    border: 1px solid #8b1e1e;
+    border-radius: 50%;
+    background-color: white;
+    color: #8b1e1e;
+    font-size: 20px;
+}
+
+.quantity {
+    min-width: 20px;
+    text-align: center;
+    font-size: 16px;
+}
+/* ポップアップ */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 2000;
+}
+
+
+/* ポップアップの中 */
+.modal-content {
+    width: 85%;
+    max-width: 400px;
+
+    padding: 30px 20px;
+
+    background-color: #fdf8f3;
+
+    text-align: center;
+
+    border: 2px solid #8b1e1e;
+}
+
+
+/* 商品名 */
+.modal-content h2 {
+    margin-bottom: 25px;
+    color: #8b1e1e;
+}
+
+
+/* 数量 */
+.quantity-control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+
+    margin-bottom: 25px;
+}
+
+
+/* − ＋ */
+.quantity-control button {
+    width: 45px;
+    height: 45px;
+
+    border: 1px solid #8b1e1e;
+    border-radius: 50%;
+
+    background-color: white;
+    color: #8b1e1e;
+
+    font-size: 22px;
+}
+
+
+/* 数量 */
+#quantity {
+    font-size: 20px;
+}
+
+
+/* カートボタン */
+#add-cart {
+    display: block;
+
+    width: 100%;
+    padding: 14px;
+
+    border: none;
+
+    background-color: #8b1e1e;
+    color: white;
+
+    font-size: 16px;
+}
+
+
+/* 閉じる */
+#close-modal {
+    margin-top: 15px;
+
+    border: none;
+    background: none;
+
+    color: #8b1e1e;
+}
+
+.cart-icon {
+    width: 28px;
+    height: 28px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+.cart-button {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+
+    width: 60px;
+    height: 60px;
+
+    border-radius: 50%;
+
+    background-color: #8b1e1e;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 26px;
+
+    text-decoration: none;
+
+    z-index: 1000;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+/* 個数 */
+
+#cart-count {
+
+    position: absolute;
+
+    top: -3px;
+
+    right: -3px;
+
+    width: 22px;
+
+    height: 22px;
+
+    border-radius: 50%;
+
+    background-color: white;
+
+    color: #8b1e1e;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+.menu-back{
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    left: 30px;
+    top: 40px;
+    position: absolute;
+}
+/* カートの数量ボタン */
+.minus-button,
+.plus-button {
+    width: 36px;
+    height: 36px;
+    border: 1px solid #8b1e1e;
+    border-radius: 50%;
+    background-color: white;
+    color: #8b1e1e;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* 数量 */
+.cart-item span {
+    display: inline-block;
+    width: 35px;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* カートを空にする */
+#clear-cart-button {
+    padding: 10px 18px;
+    border: 1px solid #8b1e1e;
+    border-radius: 20px;
+    background-color: white;
+    color: #8b1e1e;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* 注文する */
+#order-button {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 20px;
+    background-color: #8b1e1e;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* 押したとき */
+.minus-button:active,
+.plus-button:active,
+#clear-cart-button:active,
+#order-button:active {
+    transform: scale(0.95);
+}
+
+/* カート削除確認画面 */
+.confirm-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.45);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.confirm-box {
+    width: 280px;
+    padding: 30px 20px;
+    background-color: white;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.confirm-box p {
+    margin: 0 0 25px;
+    font-size: 17px;
+}
+
+.confirm-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.confirm-buttons button {
+    padding: 9px 18px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+#cancel-clear {
+    background-color: white;
+    border: 1px solid #8b1e1e;
+    color: #8b1e1e;
+}
+
+#confirm-clear {
+    background-color: #8b1e1e;
+    border: 1px solid #8b1e1e;
+    color: white;
+}
