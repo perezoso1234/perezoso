@@ -71,8 +71,9 @@ body{
 @media(max-width:600px){
     .container{
         width:86%;
-        height:850%;
-        margin-top: 65px;
+        height:auto;
+        min-height: 850px;
+        margin: 65px auto 30px;
     }
 
     .shop-name{
