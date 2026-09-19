@@ -587,17 +587,34 @@ footer {
    注文確認画面
 ============================== */
 
-#order-modal .confirm-box {
-    max-width: 400px;
-    max-height: 80vh;
-    overflow-y: auto;
+/* 注文確認画面のボタン */
+#cancel-order,
+#confirm-order {
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-family: "Bodoni Moda", serif;
+    font-size: 16px;
+    cursor: pointer;
 }
 
-#order-modal h2 {
-    margin-top: 0;
-    margin-bottom: 25px;
+/* 戻る */
+#cancel-order {
+    background-color: white;
+    border: 1px solid #8b1e1e;
     color: #8b1e1e;
-    font-size: 22px;
+}
+
+/* 注文を確定する */
+#confirm-order {
+    background-color: #8b1e1e;
+    border: 1px solid #8b1e1e;
+    color: white;
+}
+
+/* 押したとき */
+#cancel-order:active,
+#confirm-order:active {
+    transform: scale(0.95);
 }
 
 
