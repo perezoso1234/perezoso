@@ -70,17 +70,7 @@ body{
 
 @media (max-width: 600px) {
 
-    html,
-    body {
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        background-color: #b7191f;
-    }
-
-    .container {
+    .top-tage .container {
         width: 100%;
         height: 100vh;
         min-height: 0;
