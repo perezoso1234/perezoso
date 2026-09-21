@@ -563,13 +563,15 @@ footer {
 .confirm-buttons {
     display: flex;
     justify-content: center;
-    gap: 12px;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: nowrap;
 }
 
 .confirm-buttons button {
     padding: 9px 18px;
     border-radius: 20px;
-    font-size: 14px;
+    font-size: 10px;
 }
 
 #cancel-clear {
@@ -590,11 +592,12 @@ footer {
 /* 注文確認画面のボタン */
 #cancel-order,
 #confirm-order {
-    padding: 12px 25px;
+    padding: 12px 20px;
     border-radius: 30px;
     font-family: "Bodoni Moda", serif;
     font-size: 16px;
     cursor: pointer;
+    white-space: nowrap;
 }
 
 /* 戻る */
@@ -688,4 +691,12 @@ footer {
     margin: 0;
     font-size: 15px;
     white-space: nowrap;
+}
+/* 合計金額 */
+#total {
+    text-align: right;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 15px;
 }
