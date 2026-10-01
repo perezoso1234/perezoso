@@ -167,7 +167,7 @@ nav {
 
 nav a {
     width: 50%;
-    padding: 15px;
+    padding: 15px ;
     text-align: center;
     color: #8b1e1e;
     text-decoration: none;
@@ -409,40 +409,6 @@ footer {
     color: #8b1e1e;
 }
 
-.cart-icon {
-    width: 28px;
-    height: 28px;
-    fill: none;
-    stroke: currentColor;
-    stroke-width: 1.8;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-}
-.cart-button {
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-
-    width: 60px;
-    height: 60px;
-
-    border-radius: 50%;
-
-    background-color: #8b1e1e;
-    color: white;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    font-size: 26px;
-
-    text-decoration: none;
-
-    z-index: 1000;
-
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-}
 /* 個数 */
 
 #cart-count {
@@ -699,4 +665,247 @@ footer {
     font-weight: bold;
     margin-top: 10px;
     margin-bottom: 15px;
+}
+/* ==============================
+   注文完了画面
+============================== */
+
+.complete-box {
+    width: 85%;
+    max-width: 400px;
+    padding: 40px 25px;
+    background-color: #fdf8f3;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.complete-box h2 {
+    margin: 0 0 30px;
+    color: #8b1e1e;
+    font-size: 25px;
+}
+
+.complete-message {
+    margin: 15px 0;
+    font-size: 16px;
+}
+
+.order-number {
+    margin: 25px 0 5px;
+    color: #8b1e1e;
+    font-size: 15px;
+}
+
+#order-number {
+    margin: 0 0 25px;
+    color: #8b1e1e;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.back-menu-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 25px;
+    border-radius: 30px;
+    background-color: #8b1e1e;
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+/* =========================
+   下部メニュー
+========================= */
+
+.bottom-menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 65px;
+
+    background-color: #fdf8f3;
+    border-top: 1px solid #d8bcbc;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    z-index: 3000;
+}
+
+.bottom-item {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+    color: #8b1e1e;
+
+    font-family: "Bodoni Moda", serif;
+}
+
+.bottom-item span {
+    font-size: 22px;
+    line-height: 22px;
+}
+
+.bottom-item small {
+    margin-top: 3px;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+.bottom-menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 65px;
+
+    background-color: #8b1e1e;
+    border-top: none;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    z-index: 3000;
+}
+.bottom-item {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+    color: white;
+
+    font-family: "Bodoni Moda", serif;
+}
+/* ==============================
+   会計確認モーダル
+============================== */
+
+.checkout-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.45);
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 5000;
+}
+
+
+/* モーダル本体 */
+
+.checkout-modal-content {
+    width: 85%;
+    max-width: 320px;
+
+    background-color: #fdf8f3;
+
+    padding: 30px 25px 25px;
+
+    border-radius: 14px;
+
+    text-align: center;
+
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+
+    color: #4a2525;
+}
+
+
+/* タイトル */
+
+.checkout-modal-content h3 {
+    margin: 0 0 20px;
+
+    font-size: 24px;
+
+    color: #4a2525;
+
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+
+/* 説明文 */
+
+.checkout-modal-message {
+    margin: 0 0 25px;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+
+/* ボタン */
+
+.checkout-modal-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+
+/* キャンセル */
+
+.checkout-cancel {
+    flex: 1;
+
+    padding: 12px 5px;
+
+    border: 1px solid #8b1e1e;
+
+    border-radius: 25px;
+
+    background-color: white;
+
+    color: #8b1e1e;
+
+    font-size: 14px;
+
+    cursor: pointer;
+}
+
+
+/* 会計する */
+
+.checkout-confirm {
+    flex: 1;
+
+    padding: 12px 5px;
+
+    border: none;
+
+    border-radius: 25px;
+
+    background-color: #8b1e1e;
+
+    color: white;
+
+    font-size: 14px;
+
+    cursor: pointer;
+}
+
+
+/* 押したとき */
+
+.checkout-cancel:active,
+.checkout-confirm:active {
+    opacity: 0.7;
 }

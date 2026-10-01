@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>perezoso - Order history</title>
+
+    <style>
+        body {
+            margin: 0;
+            background-color: #fdf8f3;
+            color: #4a2525;
+            font-family: "Times New Roman", serif;
+        }
+
+        header {
+            background-color: #8b1e1e;
+            color: white;
+            text-align: center;
+            padding: 25px 10px;
+        }
+ 
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            margin: 5px 0 0;
+            font-size: 14px;
+            letter-spacing: 4px;
+        }
+
+        main {
+            max-width: 700px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+
+        .history-card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .history-card h2 {
+            margin-top: 0;
+            color: #9e0000;
+        }
+
+        .history-item {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .history-total {
+            text-align: right;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        .history-status {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 5px 12px;
+            border-radius: 20px;
+            background: #ffe0e0;
+            color: #9e0000;
+            font-weight: bold;
+        }
+
+        .no-history {
+            text-align: center;
+            color: #777;
+            padding: 50px 10px;
+        }
+
+        .back-button {
+            display: block;
+            text-align: center;
+            margin: 30px auto;
+            padding: 14px;
+            background: #9e0000;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+        .menu-back{
+            color: white;
+            text-decoration: none;
+            font-size: 22px;
+            left: 30px;
+            top: 40px;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+    <a href="japanese.html" class="menu-back">← Menu</a>
+
+    <h1>perezoso</h1>
+    <p>Order History</p>
+    </header>
+
+    <main>
+    <div id="history-total" style="font-family: inherit; font-size: 24px; font-weight: bold; text-align: center; margin: 25px auto;">
+    合計：0円
+    </div>
+
+    <div id="history">
+        <p class="no-history">
+            注文履歴を読み込んでいます...
+        </p>
+    </div>
+    </main>
+
+    <script type="module" src="js/order-history.js"></script>
+
+</body>
+
+</html>

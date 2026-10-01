@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>perezoso - Staff</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            background: #fff8f5;
+            color: #333;
+        }
+
+        header {
+            background: #9e0000;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        header p {
+            margin: 5px 0 0;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+
+        .order-card {
+            background: white;
+            border: 2px solid #ddd;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .order-card h2 {
+            margin-top: 0;
+            color: #9e0000;
+        }
+
+        .order-info {
+            margin-bottom: 15px;
+        }
+
+        .order-item {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #eee;
+            padding: 8px 0;
+        }
+
+        .total {
+            text-align: right;
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        .status {
+            display: inline-block;
+            background: #ffe0e0;
+            color: #9e0000;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        .no-order {
+            text-align: center;
+            padding: 50px 10px;
+            color: #777;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>perezoso</h1>
+        <p>Staff Order</p>
+    </header>
+
+    <main id="orders">
+        <p class="no-order">注文を読み込んでいます...</p>
+    </main>
+    <!-- ==============================
+     会計依頼
+    ============================== -->
+    <section class="checkout-section">
+
+        <h2>会計依頼</h2>
+
+        <div id="checkout-list">
+
+            <p class="no-checkout">
+                会計依頼はありません。
+            </p>
+
+        </div>
+
+    </section>
+
+    <script type="module" src="js/staff.js"></script>
+
+</body>
+
+</html>

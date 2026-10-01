@@ -1,17 +1,72 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-app.js";
+import {
+    getDatabase,
+    ref,
+    push,
+    set
+} from "https://www.gstatic.com/firebasejs/12.19.0/firebase-database.js";
+
+
+// ==============================
+// Firebase設定
+// ==============================
+
+const firebaseConfig = {
+    apiKey: "AIzaSyDs0l_AHLyppeX9s4yxqyti4K0CQMGAJJI",
+    authDomain: "perezoso-order.firebaseapp.com",
+    projectId: "perezoso-order",
+    storageBucket: "perezoso-order.firebasestorage.app",
+    messagingSenderId: "974299944359",
+    appId: "1:974299944359:web:60d14422d88e078caf5282",
+    measurementId: "G-35Z5VDT1RJ"
+};
+
+const app = initializeApp(firebaseConfig);
+
+const db = getDatabase(
+    app,
+    "https://perezoso-order-default-rtdb.asia-southeast1.firebasedatabase.app"
+);
+
+// ==============================
+// 卓番号をURLから取得
+// ==============================
+
+const params =
+    new URLSearchParams(window.location.search);
+
+const urlTableNumber =
+    params.get("table");
+
+if (urlTableNumber) {
+
+    localStorage.setItem(
+        "tableNumber",
+        urlTableNumber
+    );
+
+}
+
+
 // ==============================
 // カートのデータを取得
 // ==============================
 
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
+let cart =
+    JSON.parse(
+        localStorage.getItem("cart")
+    ) || [];
 
 
 // ==============================
 // HTMLの要素
 // ==============================
 
-const cartList = document.getElementById("cart-list");
+const cartList =
+    document.getElementById("cart-list");
 
-const totalElement = document.getElementById("total");
+const totalElement =
+    document.getElementById("total");
 
 const clearCartButton =
     document.getElementById("clear-cart-button");
@@ -26,7 +81,10 @@ const confirmClearButton =
     document.getElementById("confirm-clear");
 
 
+// ==============================
 // 注文確認画面
+// ==============================
+
 const orderButton =
     document.getElementById("order-button");
 
@@ -103,7 +161,6 @@ function displayCart() {
         const subtotal =
             price * quantity;
 
-
         total += subtotal;
 
 
@@ -115,50 +172,53 @@ function displayCart() {
             "cart-item";
 
 
-    itemElement.innerHTML =
+        itemElement.innerHTML =
 
-    "<div>" +
+            "<div>" +
 
-        "<h3>" +
-            item.name +
-        "</h3>" +
+                "<h3>" +
+                    item.name +
+                "</h3>" +
 
-    "</div>" +
-
-
-    "<div>" +
-
-        "<button " +
-            "type='button' " +
-            "class='minus-button' " +
-            "data-index='" + index + "'>" +
-
-            "−" +
-
-        "</button>" +
-
-        "<span>" +
-            quantity +
-        "</span>" +
-
-        "<button " +
-            "type='button' " +
-            "class='plus-button' " +
-            "data-index='" + index + "'>" +
-
-            "＋" +
-
-        "</button>" +
-
-    "</div>" +
+            "</div>" +
 
 
-    "<p class='subtotal'>" +
-        "小計 ¥" +
-        subtotal.toLocaleString() +
-    "</p>";
+            "<div>" +
 
-        cartList.appendChild(itemElement);
+                "<button " +
+                    "type='button' " +
+                    "class='minus-button' " +
+                    "data-index='" + index + "'>" +
+
+                    "−" +
+
+                "</button>" +
+
+                "<span>" +
+                    quantity +
+                "</span>" +
+
+                "<button " +
+                    "type='button' " +
+                    "class='plus-button' " +
+                    "data-index='" + index + "'>" +
+
+                    "＋" +
+
+                "</button>" +
+
+            "</div>" +
+
+
+            "<p class='subtotal'>" +
+                "小計 ¥" +
+                subtotal.toLocaleString() +
+            "</p>";
+
+
+        cartList.appendChild(
+            itemElement
+        );
 
     });
 
@@ -168,7 +228,8 @@ function displayCart() {
     // ==========================
 
     totalElement.textContent =
-        "合計 ¥" + total.toLocaleString();
+        "合計 ¥" +
+        total.toLocaleString();
 
 
     // ==========================
@@ -187,7 +248,10 @@ function displayCart() {
                         Number(button.dataset.index);
 
 
-                    if (cart[index].quantity > 1) {
+                    if (
+                        cart[index] &&
+                        cart[index].quantity > 1
+                    ) {
 
                         cart[index].quantity--;
 
@@ -219,11 +283,15 @@ function displayCart() {
                         Number(button.dataset.index);
 
 
-                    cart[index].quantity++;
+                    if (cart[index]) {
 
-                    saveCart();
+                        cart[index].quantity++;
 
-                    displayCart();
+                        saveCart();
+
+                        displayCart();
+
+                    }
 
                 }
             );
@@ -235,7 +303,7 @@ function displayCart() {
 
 // ==============================
 // 「カートを空にする」
-// ==============================
+/* ============================== */
 
 if (clearCartButton) {
 
@@ -249,7 +317,6 @@ if (clearCartButton) {
 
             }
 
-
             confirmModal.style.display =
                 "flex";
 
@@ -260,8 +327,8 @@ if (clearCartButton) {
 
 
 // ==============================
-// 「キャンセル」
-// ==============================
+// カート削除「キャンセル」
+/* ============================== */
 
 if (cancelClearButton) {
 
@@ -279,8 +346,8 @@ if (cancelClearButton) {
 
 
 // ==============================
-// 「削除する」
-// ==============================
+// カート削除「削除する」
+/* ============================== */
 
 if (confirmClearButton) {
 
@@ -432,7 +499,7 @@ if (cancelOrderButton) {
 
 
 // ==============================
-// 注文確認画面の外側を押して閉じる
+// 確認画面の外側を押して閉じる
 // ==============================
 
 if (orderModal) {
@@ -452,8 +519,6 @@ if (orderModal) {
     );
 
 }
-
-
 // ==============================
 // 「注文を確定する」
 // ==============================
@@ -462,11 +527,195 @@ if (confirmOrderButton) {
 
     confirmOrderButton.addEventListener(
         "click",
-        function() {
+        async function() {
 
-            alert(
-                "注文確定機能は次のステップで作成します。"
-            );
+            // カートが空なら終了
+            if (cart.length === 0) {
+
+                return;
+
+            }
+
+
+            // ==========================
+            // 注文確認画面を閉じる
+            // ==========================
+
+            orderModal.style.display =
+                "none";
+
+
+            // ==========================
+            // 卓番号を取得
+            // ==========================
+
+            const orderTableNumber =
+                localStorage.getItem(
+                    "tableNumber"
+                ) || "不明";
+
+
+            // ==========================
+            // 注文番号を作成
+            // ==========================
+
+            const orderNumber =
+                Date.now();
+
+
+            // ==========================
+            // 合計金額を計算
+            // ==========================
+
+            let orderTotal = 0;
+
+
+            cart.forEach(function(item) {
+
+                orderTotal +=
+                    Number(item.price) *
+                    Number(item.quantity);
+
+            });
+
+
+            // ==========================
+            // 注文データを作成
+            // ==========================
+
+            const order = {
+
+                orderNumber:
+                    orderNumber,
+
+                tableNumber:
+                    orderTableNumber,
+
+                items:
+                    cart.map(function(item) {
+
+                        return {
+                            name: item.name,
+                            price: Number(item.price),
+                            quantity: Number(item.quantity)
+                        };
+
+                    }),
+
+                total:
+                    orderTotal,
+
+                status:
+                    "new",
+
+                createdAt:
+                    Date.now()
+
+            };
+
+
+            // ==========================
+            // Firebaseに注文を保存
+            // ==========================
+
+            try {
+
+    if (!db) {
+        alert("Firebaseに接続できませんでした。");
+        return;
+    }
+
+    const ordersRef =
+        ref(db, "orders");
+
+    const newOrderRef =
+        push(ordersRef);
+
+    await set(
+        newOrderRef,
+        order
+    );
+
+                // ==========================
+                // ローカルにも保存
+                // ==========================
+
+                const orders =
+                    JSON.parse(
+                        localStorage.getItem(
+                            "orders"
+                        )
+                    ) || [];
+
+
+                orders.push(order);
+
+
+                localStorage.setItem(
+                    "orders",
+                    JSON.stringify(orders)
+                );
+
+
+                // ==========================
+                // カートを空にする
+                // ==========================
+
+                cart = [];
+
+                saveCart();
+
+
+                // ==========================
+                // 注文完了画面
+                // ==========================
+
+                const completeModal =
+                    document.getElementById(
+                        "complete-modal"
+                    );
+
+
+                if (completeModal) {
+
+                    completeModal.style.display =
+                        "flex";
+
+                }
+
+
+                // ==========================
+                // 注文番号を表示
+                // ==========================
+
+                const orderNumberElement =
+                    document.getElementById(
+                        "order-number"
+                    );
+
+
+                if (orderNumberElement) {
+
+                    orderNumberElement.textContent =
+                        "#" +
+                        String(orderNumber).slice(-3);
+
+                }
+
+
+            } catch (error) {
+
+                console.error(
+                    "注文の保存に失敗しました",
+                    error
+                );
+
+
+                alert(
+                    "注文の送信に失敗しました。\nもう一度お試しください。"
+                );
+
+            }
 
         }
     );

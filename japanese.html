@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
 <body>
@@ -936,18 +937,120 @@
     </div>
 
 </div>
-
-
-
-<a href="cart.html" class="cart-button" aria-label="カートを見る">
-    <svg class="cart-icon" viewBox="0 0 24 24">
-        <path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.8a2 2 0 0 0 2-1.6L21 8H6"/>
-        <circle cx="10" cy="20" r="1"/>
-        <circle cx="18" cy="20" r="1"/>
-    </svg>
-
+<a>
     <span id="cart-count">0</span>
 </a>
+
+<!-- ==============================
+     会計確認モーダル
+============================== -->
+
+<div id="checkout-confirm-modal" class="checkout-modal">
+
+    <div class="checkout-modal-content">
+
+        <h3>会計確認</h3>
+
+        <p class="checkout-modal-message">
+            お会計をお願いします。<br>
+            よろしいですか？
+        </p>
+
+        <div class="checkout-modal-buttons">
+
+            <button
+                type="button"
+                class="checkout-cancel"
+                id="checkout-cancel">
+                キャンセル
+            </button>
+
+            <button
+                type="button"
+                class="checkout-confirm"
+                id="checkout-confirm">
+                会計する
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ==============================
+     会計完了モーダル
+============================== -->
+
+<div id="checkout-success-modal" class="checkout-modal">
+
+    <div class="checkout-modal-content">
+
+        <h3>ありがとうございました</h3>
+
+        <p class="checkout-modal-message">
+            お会計を受け付けました。<br>
+            ありがとうございました。
+        </p>
+
+        <div class="checkout-modal-buttons">
+
+            <button
+                type="button"
+                class="checkout-confirm"
+                id="checkout-ok">
+                OK
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+<!-- ==============================
+     下部メニュー
+============================== -->
+
+<footer class="bottom-menu">
+
+    <!-- 注文履歴 -->
+    <a href="order-history.html?table=1" class="bottom-item">
+
+        <span class="footer-icon">
+            <i class="fa-solid fa-receipt"></i>
+        </span>
+
+        <small>注文履歴</small>
+
+    </a>
+
+
+    <!-- カート -->
+    <a href="cart.html" class="bottom-item">
+
+        <span class="footer-icon">
+            <i class="fa-solid fa-basket-shopping"></i>
+        </span>
+
+        <small>カート</small>
+
+    </a>
+
+
+    <!-- 会計 -->
+    <a href="#" class="bottom-item" id="checkout-button">
+
+        <span class="footer-icon">
+            <i class="fa-solid fa-cash-register"></i>
+        </span>
+
+        <small>会計</small>
+
+    </a>
+
+</footer>
 <script src="js/script.js"></script>
+<script type="module" src="js/checkout.js"></script>
 </body>
+
 </html>
